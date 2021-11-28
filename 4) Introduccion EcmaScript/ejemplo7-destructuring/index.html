@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/Alumno.js"></script>
+</head>
+<body>
+    <script>
+        var alumnos = [[1,'Juan','Sanchez',8.3], [2, 'Maria', 'Lopez', 5.3],[3, 'Pedro','Alvarez',7.5]];
+
+        for(let i in alumnos){
+            let [id, nombre, apellido, nota] = alumnos[i];
+            document.write(`Datos del alumno: id ${id}, nombre ${nombre} ${apellido}, nota ${nota}` + "<br/>");
+        }
+
+        for(let i in alumnos){
+          let [id, nombre, apellido, nota] = alumnos[i];
+        let alumno = new Alumno(id,nombre,apellido,nota);
+        alumno.mostrarInformacion();
+        }
+    </script>
+</body>
+</html>

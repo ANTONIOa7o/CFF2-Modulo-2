@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nombres = new Array('Juan','Pedro','Luis','Maria');
+
+        document.write(nombres + "<br/>");
+        console.log(nombres);
+        alert(nombres);
+
+        // operador spread; recorre la coleccion y me muestra sus valores
+        document.write(...nombres + "<br/>");
+
+
+        // Volcar los elementos de un array en otro
+        var otrosNombres = ['Ismael','Rocio', ...nombres ,'Jorge'];
+        document.write(otrosNombres + "<br/>");
+
+
+        // Solo se puede utilizar con elementos iterables
+        let numero = 4;
+        console.log(...numero);
+    </script>
+</body>
+</html>

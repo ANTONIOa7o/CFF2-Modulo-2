@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Variables globales; las puedo declarar con var o let.
+        var i=0;
+        let j = i;
+        for(i=0; i<10; i++){
+            // Variables locales; se declaran con let.
+
+            // let -> permite declarar variables locales
+          
+
+            // var -> variable global
+            //var j = i;
+        }
+
+        document.write("Variable local " + j + "<br/>"); // Error, no tengo acceso a una variable local
+        document.write("Variable global " + i + "<br/>");
+
+        const texto = "Hola";
+        //texto = "Adios"; // error, no puedo cambiar el valor de una constante
+
+        document.write(texto);
+
+    </script>
+</body>
+</html>

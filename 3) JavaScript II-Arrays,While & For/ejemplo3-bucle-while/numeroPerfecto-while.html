@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numero = 1;
+        while(numero <= 100){
+            var suma = 0;
+
+            for(var divisor=1; divisor < numero; divisor++){
+                if (numero % divisor == 0){
+                    suma += divisor;
+                }
+            }
+
+            if (suma == numero){
+                document.write("El numero " + numero + " es perfecto" + "<br/>" );
+            }
+
+            numero++;
+
+        }
+    </script>
+</body>
+</html>

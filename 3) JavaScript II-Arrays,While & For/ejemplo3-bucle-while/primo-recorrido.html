@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var encontrado = false;
+        var numero = 20;
+        while (!encontrado){
+            var esPrimo = true;
+
+            for(var divisor = 2; divisor < numero; divisor++){
+                if (numero % divisor == 0){
+                    esPrimo = false;
+                }
+            }
+
+            if (esPrimo){
+                document.write("El primer numero primo a partir de 20 es " + numero + "<br/>");
+                encontrado = true;
+            }
+            numero++;
+        }
+    </script>
+</body>
+</html>

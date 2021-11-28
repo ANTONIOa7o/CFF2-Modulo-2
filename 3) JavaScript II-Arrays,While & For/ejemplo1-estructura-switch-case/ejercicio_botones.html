@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="1" onclick="cambiarColor()">Boton 1</button>
+    <button id="2" onclick="cambiarColor()">Boton 2</button>
+    <button id="3" onclick="cambiarColor()">Boton 3</button>
+
+    <script>
+        function cambiarColor(){
+
+            switch (event.target.id){
+                case "1":
+                    alert("Has pulsado el boton 1");
+                    break;
+                case "2":
+                    alert("Has pulsado el boton 2");
+                    break;
+                case "3":
+                    alert("Has pulsado el boton 3");
+                    break;
+            }
+
+            // Buscar en la pagina todos los botones
+            var botones = document.getElementsByTagName("button");
+
+            // Recorro el array que contiene todos los botones
+            for(var indice in botones){
+                if (botones[indice].id == event.target.id){
+                    // El boton pulsado de color rojo
+                    document.getElementById(event.target.id).style.backgroundColor="red";
+                } else {
+                    // El resto de los botones de color gris
+                    botones[indice].style.backgroundColor = "#ddd";
+                }
+                
+            }
+            
+        }
+    </script>
+</body>
+</html>

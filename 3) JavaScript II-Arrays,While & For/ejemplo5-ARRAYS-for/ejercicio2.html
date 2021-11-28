@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var valores = [true,5,false,"hola","adios",2];
+        var arrayTexto = new Array();
+        var arrayBoolean = new Array();
+        var arrayNumeros = new Array();
+
+        for(var item of valores){
+            if (typeof(item) == "string"){
+                arrayTexto.push(item);
+            } else if(typeof(item) == "boolean"){
+                arrayBoolean.push(item);
+            } else if(typeof(item)=="number"){
+                arrayNumeros.push(item);
+            }
+        }
+
+        // 1.- cual de los textos es mayor
+        var textoMayor = arrayTexto[2];
+        for(var item of arrayTexto){
+            if (item.length > textoMayor.length){
+                textoMayor = item;
+            }
+        }
+        document.write("El texto mayor es " + textoMayor + "<br/>");
+
+        /*
+        if (arrayTexto[0].length > arrayTexto[1].length){
+            document.write("El texto mayor es " + arrayTexto[0]);
+        } else {
+            document.write("El texto mayor es " + arrayTexto[1]);
+        }
+        */
+        
+        // 2.- con los booleanos obtener true y false
+        var resultadoTrue = true;
+        var resultadoFalse = false;
+        for(var item of arrayBoolean){
+            resultadoTrue = resultadoTrue || item;
+            resultadoFalse = resultadoFalse && item;
+        }
+        document.write("Resultado true " + resultadoTrue + "<br/>");
+        document.write("Resultado false " + resultadoFalse + "<br/>");
+
+        // 3.- operaciones matematicas con los numericos
+        var suma = 0;
+        var multiplicacion = 1;
+        for(var item of arrayNumeros){
+            suma += item;
+            multiplicacion *= item;
+        }
+        document.write("Suma: " + suma + "<br/>");
+        document.write("Resta: " + (arrayNumeros[0] - arrayNumeros[1]) + "<br/>");
+        document.write("Multiplicacion: " + multiplicacion + "<br/>");
+        document.write("Division: " + (arrayNumeros[0] / arrayNumeros[1]) + "<br/>");
+        document.write("Resto: " + (arrayNumeros[0] % arrayNumeros[1]) + "<br/>");
+
+    </script>
+</body>
+</html>

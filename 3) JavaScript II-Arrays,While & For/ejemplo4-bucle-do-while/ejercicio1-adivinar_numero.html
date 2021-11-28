@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numero = parseInt(Math.random() * 50);
+        console.log(numero);
+        var adivina = 0;
+        var intentos = 6;
+
+        do{
+            adivina = parseInt(window.prompt("Introduce numero del 1 al 50"));
+            intentos--;
+
+            if (adivina > numero){
+                alert("Te has pasado, te quedan " + intentos + " intentos");
+            } else if(adivina < numero){
+                alert("Te has quedado corto, te quedan " + intentos + " intentos");
+            }
+        }while(adivina != numero && intentos > 0);
+
+        if (numero == adivina){
+            alert("Enhorabuena!!!! Has acertado");
+        } else {
+            alert("Lo siento, se te acabaron los intentos");
+        }
+        
+    </script>
+</body>
+</html>

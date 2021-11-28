@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bucle para recorrer los numeros del 1 al 100
+        
+        for(var numero = 1; numero <= 100; numero++){
+            var esPrimo = true;
+            console.log("Probando numero " + numero + " ---------------- ");
+
+            // Bucle para recorrer los posibles divisores del numero
+            for(var divisor = 2; divisor < numero; divisor++){
+                console.log("Probando divisor " + divisor);
+                if (numero % divisor == 0){
+                    esPrimo = false;
+                    // Terminamos de probar divisores
+                    //break;
+
+                    // Continuar con el siguiente numero
+                    continue;
+                }
+            }
+
+            if (esPrimo){
+                document.write("El numero " + numero + " es primo <br/>");
+            }
+        }
+    </script>
+</body>
+</html>

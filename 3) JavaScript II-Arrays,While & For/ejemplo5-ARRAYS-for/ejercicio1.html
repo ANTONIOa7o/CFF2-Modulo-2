@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numeros = new Array(1,6,8,2,4,9,7);
+
+        // Recorrer los elementos del array
+        for(var i=0; i<numeros.length; i++){
+            console.log(numeros[i]);
+        }
+
+        // Otra forma de recorrer arrays
+        for(var i in numeros){
+            console.log(numeros[i]);
+        }
+
+        // En este caso recorremos elementos, no sus indices
+        for(var elemento of numeros){
+            console.log(elemento);
+        }
+
+        // Mostrar el array en pagina
+        document.write("Array: " + numeros + "<br/>");
+
+        // Mostrar el array invertido
+        document.write("Array invertido: " + numeros.reverse() + "<br/>");
+
+        // Array ordenado ascendente
+        document.write("Array ordenado ascendente: " + numeros.sort() + "<br/>");
+
+        // Array ordenado descendente
+        document.write("Array ordenado descendente: " + numeros.sort().reverse() + "<br/>");
+
+        // Elementos del array separados por "|"
+        document.write("Array join: " + numeros.join("|") + "<br/>");
+
+        // Mostrar los elementos de las posiciones 3 a 5 (3 elementos)
+        document.write("Array posiciones 3 a 5: " + numeros.slice(3,6) + "<br/>");
+
+        // Mostrar los elementos desde el indice 4 hasta el final
+        document.write("Array posiciones 4 al final: " + numeros.slice(4) + "<br/>");
+
+        // Crear otro array de letras 'a'
+        var letras = ['a','b','c','d','e'];
+
+        // Concatenar numeros a letras
+        document.write("Array numeros y letras: " + numeros.concat(letras) + "<br/>");
+
+        // Concatenar letras a numeros
+        document.write("Array letras y numeros: " + letras.concat(numeros) + "<br/>");
+    </script>
+</body>
+</html>
